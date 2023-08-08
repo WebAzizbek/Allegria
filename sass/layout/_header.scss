@@ -1,0 +1,357 @@
+.header {
+    .container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 19px 20px;
+    }
+}
+.search-open {
+    translate: 0 0% !important;
+    opacity: 1 !important;
+}
+.header__top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    background-color: #fff;
+}
+.header__logo {
+    margin-right: auto;
+    &:hover {
+        opacity: 0.8;
+    }
+    @include responsive(table) {
+        width: 116px;
+        height: 14px;
+    }
+}
+.header__logo-img {
+    display: block;
+}
+.headernav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    @include responsive(laptop) {
+        position: static;
+        transform: translate(0%, 0%);
+        margin-right: 45px;
+    }
+    @include responsive(big-table) {
+        margin-right: 20px;
+        font-size: 13px;
+    }
+    @include responsive(table) {
+        display: none;
+    }
+}
+.headernav__item {
+    
+}
+.headernav__item::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: $color-orange;
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transition: width 0.3s linear;
+}
+.headernav__item:hover::after {
+    width: 50%;
+}
+.headernav__item::before {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: $color-orange;
+    position: absolute;
+    bottom: -6px;
+    right: 50%;
+    transition: width 0.3s linear;
+}
+.headernav__item:hover::before {
+    width: 50%;
+}
+.headernav__item:hover {
+    color: $color-orange !important;
+}
+.headernav__item:first-child {
+    text-transform: uppercase;
+    margin-right: 45px;
+    @include responsive(big-table) {
+        margin-right: 20px;
+    }
+}
+.headernav__item:nth-child(2) {
+    text-transform: uppercase;
+    margin-right: 40px;
+    color: $color-gray;
+    @include responsive(big-table) {
+        margin-right: 20px;
+    }
+}
+.headernav__link {
+}
+.headernav__form {
+    display: flex;
+    gap: 20px;
+}
+.headernav__label {
+    text-transform: uppercase;
+}
+#headernav-inp {
+    border-bottom: 1px solid $color-blue;
+    outline: none;
+}
+.language {
+    display: flex;
+    gap: 15px;
+    margin-right: 57px;
+    @include responsive(laptop) {
+        display: none;
+    }
+}
+.language__item {
+    text-transform: uppercase;
+}
+.language__item:first-child {
+    display: flex;
+    flex-direction: column;
+    color: $color-orange;
+}
+.language__item:first-child::after {
+    content: '';
+    border-bottom: 2px solid $color-orange;
+    position: relative;
+    top: 19px;
+}
+.language__link {
+}
+.like {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.bars-btn {
+    display: none;
+    @include responsive(table) {
+        display: block;
+    }
+}
+
+.like__link {
+}
+.like__img {
+}
+
+.owl-carousel {
+    margin-top: 62px;
+}
+.header__item {
+    min-height: 585px;
+    @include responsive(table) {
+        min-height: 462px !important;
+    }
+    @include responsive(litle-phone) {
+        min-height: 460px !important;
+    }
+    .container {
+        
+    }
+}
+.hed1:first-child {
+    background-image: url('../images/png/hero-1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @include responsive(laptop) {
+        background-position: top left;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .header__item-brand {
+        font-family: $cormorant-font;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24.22px;
+        text-transform: uppercase;
+        color: #EAE9E8;
+        letter-spacing: 0;
+        margin-bottom: 10px;
+    }
+    .header__item-title {
+        font-family: $cormorant-font;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 48.44px;
+        text-transform: uppercase;
+        color: #EAE9E8;
+        letter-spacing: 0;
+        margin-bottom: 35px;
+    }
+    .header__item-link {
+        text-transform: uppercase;
+        color: #EAE9E8;
+    }
+}
+
+
+.hed2 {
+    background-image: url('../images/png/hero-2.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    @include responsive(laptop) {
+        background-position: right;
+        background-size: cover;
+    }
+    @include responsive(table) {
+        min-height: 462px !important;
+    }
+    @include responsive(litle-phone) {
+        min-height: 460px !important;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 585px;
+        @include responsive(table) {
+            height: 462px !important;
+        }
+    }
+    .header__item-brand {
+        font-family: $cormorant-font;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24.22px;
+        text-transform: uppercase;
+        color: $color-blue;
+        letter-spacing: 0;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    .header__item-title {
+        font-family: $cormorant-font;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 48.44px;
+        text-transform: uppercase;
+        color: $color-blue;
+        letter-spacing: 0;
+        margin-bottom: 35px;
+    }
+    .header__item-link {
+        text-transform: uppercase;
+        color: $color-orange;
+    }
+}
+.hed3 {
+    background-image: url('../images/png/hero-3.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include responsive(laptop) {
+        background-position: center;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 585px;
+        @include responsive(table) {
+            height: 462px !important;
+        }
+        @include responsive(litle-phone) {
+            min-height: 460px !important;
+        }
+    }
+    .header__item-brand {
+        font-family: $cormorant-font;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24.22px;
+        text-transform: uppercase;
+        color: $color-blue;
+        letter-spacing: 0;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    .header__item-title {
+        font-family: $cormorant-font;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 48.44px;
+        text-transform: uppercase;
+        color: $color-blue;
+        letter-spacing: 0;
+        margin-bottom: 35px;
+    }
+    .header__item-link {
+        text-transform: uppercase;
+        color: $color-orange;
+    }
+}
+.hed4 {
+    background-image: url('../images/png/hero-4.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    @include responsive(laptop) {
+        background-position: center;
+        background-size: cover;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 585px;
+        @include responsive(table) {
+            height: 462px !important;
+        }
+        @include responsive(litle-phone) {
+            min-height: 460px !important;
+        }
+    }
+    .header__item-brand {
+        font-family: $cormorant-font;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24.22px;
+        text-transform: uppercase;
+        color: $color-blue;
+        letter-spacing: 0;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    .header__item-title {
+        font-family: $cormorant-font;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 48.44px;
+        text-transform: uppercase;
+        color: $color-blue;
+        letter-spacing: 0;
+        margin-bottom: 35px;
+    }
+    .header__item-link {
+        text-transform: uppercase;
+        color: $color-orange;
+    }
+}

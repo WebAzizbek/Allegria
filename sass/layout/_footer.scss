@@ -1,0 +1,83 @@
+.footer{ 
+    hr{ 
+        border: none; 
+        outline: none; 
+        height: 1px; 
+        background-color:#EAE9E8; 
+        width: 100%; 
+        @include responsive(table){ 
+            display: none; 
+        } 
+    } 
+    .container{ 
+        text-align: center; 
+        h1{ 
+            @include responsive(litle-phone){ 
+                font-size: 20px; 
+                line-height: 28px; 
+            } 
+            margin-top: 65px; 
+            margin-bottom: 20px; 
+            font-weight: 600;  
+            letter-spacing: 10px; 
+            font-size: 30px; 
+            line-height: 31px; 
+            color: #0F303F; 
+            text-transform: uppercase; 
+        } 
+        .input-wr{ 
+            margin-bottom: 30px; 
+            input{ 
+                padding-bottom: 5px; 
+                text-align: center; 
+                margin-right: 8px; 
+                border: none; 
+                border-bottom:1px solid #0F303F; 
+                color: #0F303F; 
+            } 
+            img{ 
+                margin-bottom: -5px; 
+            } 
+        } 
+        ul{ 
+            margin: 0 auto; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 40px; 
+            margin-bottom: 60px; 
+            @include responsive(litle-phone){ 
+                gap: 20px; 
+            } 
+            a{ 
+                @include responsive(litle-phone){ 
+                    font-size: 12px; 
+                    line-height: 19px; 
+                } 
+                font-size: 16px; 
+                line-height: 22px; 
+                color: #B7C1C5; 
+                transition: all .3s; 
+                &:hover{ 
+                    color: #E64926; 
+                } 
+                &:active{ 
+                    opacity: 0.6; 
+                } 
+            } 
+        } 
+        .hr{ 
+            margin-bottom: 15px; 
+        } 
+        .over{ 
+            @include responsive(litle-phone){ 
+                font-size: 8px; 
+                line-height: 10px; 
+            } 
+            margin-top: 15px; 
+            margin-bottom: 15px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+        } 
+    } 
+}
